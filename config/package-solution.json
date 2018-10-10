@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "labor-webpart-client-side-solution",
+    "id": "f4784e26-f731-412a-b7d2-0a87cfa7d5f7",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/labor-webpart.sppkg"
+  }
+}
