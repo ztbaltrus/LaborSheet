@@ -1,0 +1,52 @@
+{
+  "id": "94ddeca8-f89d-477d-9828-6513868ad73d",
+  "alias": "LaborSheetWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Other"
+      },
+      "title": {
+        "default": "Labor Sheet"
+      },
+      "description": {
+        "default": "Labor Sheet description"
+      },
+      "officeFabricIconFontName": "Page",
+      "properties": {
+        "description": "Labor Sheet"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "entryModuleId": "labor-sheet-web-part",
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/"
+    ],
+    "scriptResources": {
+      "labor-sheet-web-part": {
+        "type": "path",
+        "path": "dist/labor-sheet-web-part.js"
+      },
+      "LaborSheetWebPartStrings": {
+        "defaultPath": "lib/webparts/laborSheet/loc/en-us.js",
+        "type": "localizedPath"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "version": "1.6.0",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "version": "1.6.0",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0"
+      }
+    }
+  }
+}
