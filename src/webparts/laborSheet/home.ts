@@ -1,10 +1,11 @@
 import { inject } from 'aurelia-framework';
 import WebPartContext from '@microsoft/sp-webpart-base/lib/core/WebPartContext';
-import { SPUser } from '@microsoft/sp-page-context';
+import { SPUser, PageContext } from '@microsoft/sp-page-context';
 
 @inject("WebPartContextObject")
 export class Home {
   public webpartContext: WebPartContext;
+  public webPageContext: PageContext;
   public heading: string;
   public user: SPUser;
   public firstName: string = 'John';

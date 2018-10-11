@@ -86,7 +86,7 @@ define("94ddeca8-f89d-477d-9828-6513868ad73d_0.0.1", ["@microsoft/sp-core-librar
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + ({}[chunkId]||chunkId) + "_" + {"0":"eb8404d56543ae1e8a7b"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + ({}[chunkId]||chunkId) + "_" + {"0":"1dd0b85b10a422ad92bc"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -1586,7 +1586,7 @@ var LaborSheetWebPart = (function (_super) {
                     .developmentLogging();
                 var el = document.getElementById(_this.instanceId);
                 aurelia.start().then(function () {
-                    aurelia.container.registerInstance("WebPartContext", _this.context);
+                    aurelia.container.registerInstance("WebPartContextObject", _this.context);
                     aurelia.setRoot('webparts/laborSheet/app', el);
                 });
             });

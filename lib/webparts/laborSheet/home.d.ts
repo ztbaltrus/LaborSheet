@@ -1,7 +1,8 @@
 import WebPartContext from '@microsoft/sp-webpart-base/lib/core/WebPartContext';
-import { SPUser } from '@microsoft/sp-page-context';
+import { SPUser, PageContext } from '@microsoft/sp-page-context';
 export declare class Home {
     webpartContext: WebPartContext;
+    webPageContext: PageContext;
     heading: string;
     user: SPUser;
     firstName: string;
