@@ -1,6 +1,6 @@
 ## labor-webpart
 
-This is where you include your WebPart documentation.
+Sharepoint Webpart that lets the user update Labor Hours
 
 ### Building the code
 
@@ -24,3 +24,8 @@ gulp test - TODO
 gulp serve - TODO
 gulp bundle - TODO
 gulp package-solution - TODO
+
+### Things to watch out for
+
+make sure that gulp version is set to @3.9.1 and not 4.0.0
+

@@ -35,7 +35,7 @@ export default class LaborSheetWebPart extends BaseClientSideWebPart<ILaborSheet
         .developmentLogging();
         var el = document.getElementById(this.instanceId);
         aurelia.start().then(() => {
-          aurelia.container.registerInstance("WebPartContext", this.context);
+          aurelia.container.registerInstance("WebPartContextObject", this.context);
           aurelia.setRoot(PLATFORM.moduleName('webparts/laborSheet/app'),el);
         });
       });

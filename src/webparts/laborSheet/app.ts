@@ -5,7 +5,7 @@ import {PLATFORM} from 'aurelia-pal';
 export class App {
   public router: Router;
 
-  configureRouter(config: RouterConfiguration, router: Router){
+  public configureRouter(config: RouterConfiguration, router: Router){
     config.title = 'Labor Sheet';
     config.map([
       { route: ['', 'home'],   name: 'home',    moduleId: PLATFORM.moduleName('./home'), nav: true, title: 'Home' },
