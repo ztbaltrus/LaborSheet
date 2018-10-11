@@ -1,16 +1,16 @@
 /* tslint:disable */
 require('./LaborSheetWebPart.module.css');
 const styles = {
-  laborSheet: 'laborSheet_ce302485',
-  container: 'container_ce302485',
-  row: 'row_ce302485',
-  column: 'column_ce302485',
-  'ms-Grid': 'ms-Grid_ce302485',
-  title: 'title_ce302485',
-  subTitle: 'subTitle_ce302485',
-  description: 'description_ce302485',
-  button: 'button_ce302485',
-  label: 'label_ce302485',
+  laborSheet: 'laborSheet_79bcbc57',
+  container: 'container_79bcbc57',
+  row: 'row_79bcbc57',
+  column: 'column_79bcbc57',
+  'ms-Grid': 'ms-Grid_79bcbc57',
+  title: 'title_79bcbc57',
+  subTitle: 'subTitle_79bcbc57',
+  description: 'description_79bcbc57',
+  button: 'button_79bcbc57',
+  label: 'label_79bcbc57',
 };
 
 export default styles;

@@ -23,27 +23,24 @@ export default class LaborSheetWebPart extends BaseClientSideWebPart<ILaborSheet
     Bluebird.config({ warnings: { wForgottenReturn: false } });
   }
 
-  public render(): void {
-    this.domElement.innerHTML = `
-     <div id="${this.instanceId}" class="${this.instanceId}"  >Loading...</div>
-     `;
-
-     require(['aurelia-bootstrapper'],(au) =>
-     {
-       au.bootstrap(
-         (aurelia: Aurelia) =>
-         {
-           aurelia.use
-           .standardConfiguration()
-           .developmentLogging();
-           var el = document.getElementById(this.instanceId);
-           aurelia.container.registerInstance ("WebPartContext", this.context);
-           aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('webparts/laborSheet/app'),el));
-         }
-       );
-
-     });
-    }
+  public render(): void 
+  {
+    this.domElement.innerHTML = `<div id="${this.instanceId}" class="${this.instanceId}"  >Loading...</div>`;
+    require(['aurelia-bootstrapper'],(au) =>
+    {
+      au.bootstrap((aurelia: Aurelia) =>
+      {
+        aurelia.use
+        .standardConfiguration()
+        .developmentLogging();
+        var el = document.getElementById(this.instanceId);
+        aurelia.start().then(() => {
+          aurelia.container.registerInstance("WebPartContext", this.context);
+          aurelia.setRoot(PLATFORM.moduleName('webparts/laborSheet/app'),el);
+        });
+      });
+    });
+  }
 
   protected get dataVersion(): Version {
     return Version.parse('1.0');

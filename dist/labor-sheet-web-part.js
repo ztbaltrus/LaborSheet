@@ -86,7 +86,7 @@ define("94ddeca8-f89d-477d-9828-6513868ad73d_0.0.1", ["@microsoft/sp-core-librar
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + ({}[chunkId]||chunkId) + "_" + {"0":"7180937f38b13b8b149f"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + ({}[chunkId]||chunkId) + "_" + {"0":"eb8404d56543ae1e8a7b"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -1578,15 +1578,17 @@ var LaborSheetWebPart = (function (_super) {
     }
     LaborSheetWebPart.prototype.render = function () {
         var _this = this;
-        this.domElement.innerHTML = "\n     <div id=\"" + this.instanceId + "\" class=\"" + this.instanceId + "\"  >Loading...</div>\n     ";
+        this.domElement.innerHTML = "<div id=\"" + this.instanceId + "\" class=\"" + this.instanceId + "\"  >Loading...</div>";
         __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(18)]; (function (au) {
             au.bootstrap(function (aurelia) {
                 aurelia.use
                     .standardConfiguration()
                     .developmentLogging();
                 var el = document.getElementById(_this.instanceId);
-                aurelia.container.registerInstance("WebPartContext", _this.context);
-                aurelia.start().then(function () { return aurelia.setRoot('webparts/laborSheet/app', el); });
+                aurelia.start().then(function () {
+                    aurelia.container.registerInstance("WebPartContext", _this.context);
+                    aurelia.setRoot('webparts/laborSheet/app', el);
+                });
             });
         }.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}).catch(__webpack_require__.oe);
     };
