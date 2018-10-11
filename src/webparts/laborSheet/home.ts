@@ -1,26 +1,22 @@
-//import {computedFrom} from 'aurelia-framework';
-import WebPartContext from '@microsoft/sp-webpart-base/lib/core/WebPartContext';
 import { inject } from 'aurelia-framework';
+import WebPartContext from '@microsoft/sp-webpart-base/lib/core/WebPartContext';
+import { SPUser } from '@microsoft/sp-page-context';
 
-@inject("WebPartContext")
+@inject("WebPartContextObject")
 export class Home {
   public webpartContext: WebPartContext;
-
-  constructor (webpartContext: WebPartContext)
-  {
-      this.webpartContext = webpartContext;
-  }
-
-  public heading: string = 'Labor Report Sheet';
+  public heading: string;
+  public user: SPUser;
   public firstName: string = 'John';
   public lastName: string = 'Doe';
   public previousValue: string = this.fullName;
 
-  //Getters can't be directly observed, so they must be dirty checked.
-  //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
-  //To optimize by declaring the properties that this getter is computed from, uncomment the line below
-  //as well as the corresponding import above.
-  //@computedFrom('firstName', 'lastName')
+  constructor(webpartContext: WebPartContext) 
+  {
+    this.webpartContext = webpartContext;
+    this.heading = "Hello " + this.webpartContext.pageContext.user.displayName;
+  }
+  
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
